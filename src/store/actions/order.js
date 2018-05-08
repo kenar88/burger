@@ -5,6 +5,7 @@ const {
     PURCHASE_BURGER_SUCCESS,
     PURCHASE_BURGER_FAIL,
     PURCHASE_BURGER_START,
+    PURCHASE_INIT,
 } = actions;
 
 export const purchaseBurgerSuccess = (orderId, orderData) => {
@@ -40,4 +41,10 @@ export const purchaseBurger = (orderData) => {
             dispatch(purchaseBurgerFail(error))
           });
     }
+}
+
+export const purchaseInint = () => {
+    return {
+        type: PURCHASE_INIT,
+    };
 }
